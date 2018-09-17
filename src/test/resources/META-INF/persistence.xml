@@ -1,0 +1,17 @@
+<persistence>
+    <persistence-unit name="myapp">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <jta-data-source>java:/DefaultDS</jta-data-source>
+
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:db;INIT=CREATE SCHEMA db IF NOT EXISTS;"/>
+            <property name="hibernate.default_schema" value="db"/>
+            <property name="hibernate.dialect" value="H2Dialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.archive.scanner" value="StandardScanner"/>
+        </properties>
+    </persistence-unit>
+</persistence>
