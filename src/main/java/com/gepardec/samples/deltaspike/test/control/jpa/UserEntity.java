@@ -40,6 +40,17 @@ public class UserEntity implements Serializable {
     @Length(min = 1, max = 50)
     private String email;
 
+    public UserEntity() {
+    }
+
+    public UserEntity(String firstName,
+                      String lastName,
+                      String email) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+    }
+
     public Long getId() {
         return id;
     }
