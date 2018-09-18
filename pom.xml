@@ -26,8 +26,6 @@
         <version.junit>4.12</version.junit>
         <version.weld>2.4.3.Final</version.weld>
         <version.slf4j>1.7.25</version.slf4j>
-        <version.hibernate>5.3.1.Final</version.hibernate>
-        <version.h2>1.4.197</version.h2>
 
         <!-- Plugin versions -->
         <maven-compiler-plugin.version>3.3</maven-compiler-plugin.version>
@@ -45,14 +43,6 @@
                 <groupId>org.apache.deltaspike.distribution</groupId>
                 <artifactId>distributions-bom</artifactId>
                 <version>${version.deltaspike}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-
-            <dependency>
-                <groupId>org.hibernate.ogm</groupId>
-                <artifactId>hibernate-ogm-bom</artifactId>
-                <version>${version.hibernate}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -93,23 +83,6 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- Dependencies Hibernate -->
-        <dependency>
-            <groupId>org.hibernate.javax.persistence</groupId>
-            <artifactId>hibernate-jpa-2.1-api</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.jboss.spec.javax.transaction</groupId>
-            <artifactId>jboss-transaction-api_1.2_spec</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-validator</artifactId>
-            <version>${version.hibernate}</version>
-        </dependency>
-
         <!-- Dependencies Others -->
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -135,13 +108,6 @@
         <dependency>
             <groupId>org.apache.deltaspike.modules</groupId>
             <artifactId>deltaspike-test-control-module-impl</artifactId>
-            <scope>test</scope>
-        </dependency>
-
-
-        <dependency>
-            <groupId>org.apache.deltaspike.modules</groupId>
-            <artifactId>deltaspike-jpa-module-impl</artifactId>
             <scope>test</scope>
         </dependency>
 
@@ -180,20 +146,6 @@
             <version>${version.slf4j}</version>
             <scope>test</scope>
         </dependency>
-
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-core</artifactId>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <version>${version.h2}</version>
-            <scope>test</scope>
-        </dependency>
-
     </dependencies>
 
     <build>
